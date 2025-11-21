@@ -6,17 +6,17 @@ const AboutPages = () => {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/albums/1/photos")
-      .then((shohruh) => setabujon(shohruh.data))
+      .get("https://dummyjson.com/recipes")
+      .then((shohruh) => setabujon(shohruh.data.recipes))
       .catch((asomiddin) => console.log(asomiddin, "xatolik"));
   }, []);
 
   return (
-    <div>
-      <main className="h-[680px]">
+    <div className=" ">
+      <main className=" grid grid-cols-3 gap-3 p-3">
         {abujon.map((item) => (
           <div key={item.id}>
-            <img src={item.image} alt="" />
+            <img className="" src={item.image} alt="" />
             <h1>{item.title}</h1>
           </div>
         ))}

@@ -13,12 +13,12 @@ const HomePages = () => {
   return (
     <div>
         <div className='max-w-[1500px] m-auto'>
-            <main className="grid grid-cols-7">
+            <main className="grid grid-cols-7 gap-3">
             {
                 data.map((item) => (
                     <div key={item.id}>
                         <img className='w-[200px]' src={item.image} alt="" />
-                        <h1>{item.name}</h1>
+                        <h1 className='bg-cyan-600 w-[200px]'>{item.name}</h1>
                     </div>
                 ))
             }
